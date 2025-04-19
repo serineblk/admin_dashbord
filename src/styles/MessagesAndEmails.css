@@ -1,0 +1,460 @@
+/* MessagesAndEmails.css */
+
+/* Styles de base */
+.messages-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  background-color: #f9f3e4; /* Fond clair avec un ton marron */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages-container h1,
+.messages-container h2,
+.messages-container h3 {
+  color: #5c4033; /* Marron foncé */
+  margin-bottom: 15px;
+}
+
+.messages-container h1 {
+  font-size: 28px;
+  border-bottom: 2px solid #a0522d; /* Marron chaud */
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.messages-container h2 {
+  font-size: 22px;
+  margin-top: 25px;
+}
+
+.messages-container h3 {
+  font-size: 18px;
+  color: #8b4513; /* Marron moyen */
+}
+
+/* Boutons de navigation */
+.view-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d2b48c; /* Marron doux */
+  padding-bottom: 15px;
+}
+
+.view-switcher button {
+  padding: 8px 15px;
+  background-color: #f5deb3; /* Crème légèrement dorée */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.view-switcher button:hover {
+  background-color: #deb887; /* Marron boisé plus foncé */
+}
+
+.view-switcher button.active {
+  background-color: #a0522d; /* Marron chaud */
+  color: white;
+}
+
+/* Filtres et recherche */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  background-color: #fff8dc; /* Beige très clair */
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 10px 8px 35px;
+  border: 1px solid #d2b48c; /* Marron doux */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff8dc; /* Fond beige */
+}
+
+.search-bar svg {
+  position: absolute;
+  left: 10px;
+  color: #5c4033; /* Marron foncé */
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #5c4033; /* Marron foncé */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-group select {
+  padding: 8px;
+  border: 1px solid #d2b48c; /* Marron doux */
+  border-radius: 4px;
+  background-color: #fff8dc; /* Fond beige */
+  cursor: pointer;
+}
+
+/* Tableau des messages */
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff8dc; /* Fond beige */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.messages-table th,
+.messages-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #d2b48c; /* Marron doux */
+}
+
+.messages-table th {
+  background-color: #a0522d; /* Marron chaud */
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.messages-table th svg {
+  margin-left: 5px;
+}
+
+.messages-table tr:hover {
+  background-color: #f5deb3; /* Crème légèrement dorée */
+}
+
+.messages-table tr.unread {
+  font-weight: 500;
+  background-color: #ffe4b5; /* Beige doré */
+}
+
+.messages-table tr.unread:hover {
+  background-color: #ffdead; /* Beige plus clair */
+}
+
+.messages-table tr.read {
+  color: #8b4513; /* Marron moyen */
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.actions button:hover {
+  transform: translateY(-1px);
+}
+
+.read-btn {
+  background-color: #8b4513; /* Marron moyen */
+  color: white;
+}
+
+.read-btn:hover {
+  background-color: #5c4033; /* Marron foncé */
+}
+
+.reply-btn {
+  background-color: #a0522d; /* Marron chaud */
+  color: white;
+}
+
+.reply-btn:hover {
+  background-color: #8b4513; /* Marron moyen */
+}
+
+.edit-btn {
+  background-color: #d2b48c; /* Marron doux */
+  color: #5c4033; /* Marron foncé */
+}
+
+.edit-btn:hover {
+  background-color: #8b4513; /* Marron moyen */
+}
+
+.delete-btn {
+  background-color: #cd5c5c; /* Rouge terreux */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #8b0000; /* Rouge foncé */
+}
+
+.history-btn {
+  background: none;
+  border: none;
+  color: #a0522d; /* Marron chaud */
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Formulaire de composition */
+.compose-message {
+  background-color: #fff8dc; /* Fond beige */
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.compose-message form > div {
+  margin-bottom: 15px;
+}
+
+.compose-message label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #5c4033; /* Marron foncé */
+}
+
+.compose-message input,
+.compose-message select,
+.compose-message textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d2b48c; /* Marron doux */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff8dc; /* Fond beige */
+}
+
+.compose-message textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.quick-actions {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d2b48c; /* Marron doux */
+}
+
+.template-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.template-buttons button {
+  padding: 8px 12px;
+  background-color: #f5deb3; /* Crème légèrement dorée */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.template-buttons button:hover {
+  background-color: #deb887; /* Marron boisé */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.send-btn {
+  padding: 10px 20px;
+  background-color: #a0522d; /* Marron chaud */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #8b4513; /* Marron moyen */
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background-color: #d2b48c; /* Marron doux */
+  color: #5c4033; /* Marron foncé */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #8b4513; /* Marron moyen */
+}
+
+/* Section historique */
+.history-section {
+  background-color: #fff8dc; /* Fond beige */
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  padding: 8px 15px;
+  background-color: #d2b48c; /* Marron doux */
+  color: #5c4033; /* Marron foncé */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-btn:hover {
+  background-color: #8b4513; /* Marron moyen */
+}
+
+.client-info {
+  background-color: #f5deb3; /* Crème légèrement dorée */
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.client-info p {
+  margin: 5px 0;
+  color: #5c4033; /* Marron foncé */
+}
+
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  border-left: 3px solid #a0522d; /* Marron chaud */
+  padding: 15px;
+  background-color: #fff8dc; /* Fond beige */
+  border-radius: 0 6px 6px 0;
+}
+
+.history-date {
+  font-weight: 500;
+  color: #a0522d; /* Marron chaud */
+  margin-bottom: 5px;
+}
+
+.history-type {
+  font-size: 14px;
+  color: #5c4033; /* Marron foncé */
+  margin-bottom: 5px;
+}
+
+.history-subject {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.history-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5c4033; /* Marron foncé */
+}
+
+.client-list ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.client-list li button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f5deb3; /* Crème légèrement dorée */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.client-list li button:hover {
+  background-color: #deb887; /* Marron boisé */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .messages-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .templates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-list ul {
+    grid-template-columns: 1fr;
+  }
+}

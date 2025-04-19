@@ -1,0 +1,308 @@
+/* HotelCleaningManagement.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.hotel-cleaning-management {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+h2 svg {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.search-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar,
+.filter-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input,
+.filter-bar select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.staff-list,
+.task-list,
+.inventory-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.staff-card,
+.task-card,
+.inventory-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(50% - 10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-info h3,
+.task-card h3,
+.inventory-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.staff-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.add-task-button,
+button.add-button {
+  background-color: #28a745;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.restock-button {
+  background-color: #ffc107;
+  color: black;
+}
+
+button.save-button {
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  color: #555;
+}
+
+.coordination-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .staff-card,
+  .task-card,
+  .inventory-card {
+    width: 100%;
+  }
+
+  .search-filter-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.special-request-section .special-request-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(50% - 10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.special-request-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.action-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-special-request-button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .special-request-card {
+    width: 100%;
+  }
+}
+.notification-section .notification-card {
+  background-color: #fff8dc;
+  border: 1px solid #f5d76e;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.history-section .history-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination span {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .staff-card {
+    width: 100%;
+  }
+}
+.add-employee-form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.add-employee-form h3 {
+  margin-bottom: 10px;
+}
+
+.add-employee-form input,
+.add-employee-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-employee-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-employee-form button:hover {
+  opacity: 0.9;
+}
+.add-task-form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.add-task-form h3 {
+  margin-bottom: 10px;
+}
+
+.add-task-form input,
+.add-task-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-task-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,119 @@
+/* Conteneur principal */
+.services-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Titre principal */
+  .services-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Liste des services */
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Carte de service */
+  .service-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-card.active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icône du service */
+  .icon-container {
+    font-size: 2.5rem;
+    color: #0a0a0a;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Image du service */
+  .service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+  
+  /* Nom du service */
+  .service-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Description du service */
+  .service-description {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Détails du service */
+  .service-details {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+  }
+  
+  /* Liste des détails */
+  .details-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .detail-item {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .detail-price, .detail-hours, .detail-team {
+    font-size: 0.9rem;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service-details {
+    animation: fadeIn 0.5s ease-in-out;
+  }
