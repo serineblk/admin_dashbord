@@ -1,27 +1,29 @@
 /* Variables CSS */
 :root {
-  --primary-dark: #8a602aec;
-  --primary-main: #b37d2ce7;
-  --primary-light: #3a3736;
-  --secondary: #030303;
-  --text-primary: #0f0f0f;
-  --text-secondary: #070707;
-  --active-color: #5f453b;
+  --primary-dark: #723417; /* Marron foncé */
+  --primary-main: #da874c; /* Marron clair */
+  --primary-light: #f4e4d4; /* Beige clair */
+  --secondary: #3a3736; /* Marron très foncé */
+  --text-primary: #ffffff; /* Blanc pur */
+  --text-secondary: #e0dcd2; /* Marron très clair */
+  --active-color: #5f453b; /* Marron moyen */
   
-  --online-status: #4CAF50;
+  --online-status: #4CAF50; /* Vert pour le statut en ligne */
   --navbar-width: 300px;
   --navbar-collapsed: 90px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius: 12px;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  --logout-color: #ff0000;
-  --logout-hover: #f50a06;
+  --logout-color: #ff0000; /* Rouge pour le bouton de déconnexion */
+  --logout-hover: #f50a06; /* Rouge foncé pour le survol */
 }
 
 nav {
   width: var(--navbar-width);
   height: 100vh;
-  background: linear-gradient(160deg, var(--primary-dark), var(--primary-main));
+  background: linear-gradient(135deg, #94431e,  #756b64); /* Dégradé de couleurs dynamique */
+  background-size: 200% 200%; /* Animation du dégradé */
+  animation: gradientAnimation 8s ease infinite; /* Animation fluide du dégradé */
   color: var(--text-primary);
   position: fixed;
   top: 0;
@@ -34,7 +36,17 @@ nav {
   box-shadow: var(--shadow);
   border-right: 1px solid rgba(239, 235, 233, 0.1);
 }
-
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 nav.collapsed {
   width: var(--navbar-collapsed);
 }
@@ -61,7 +73,7 @@ nav.collapsed {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: white;
+  color: var(--text-primary);
   display: block;
   margin-bottom: 2px;
 }
@@ -133,7 +145,7 @@ nav.collapsed {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
-  color: white;
+  color: var(--text-primary);
 }
 
 .profile-role {
@@ -205,7 +217,7 @@ nav button:hover {
 
 nav button.active {
   background: rgba(121, 85, 72, 0.4);
-  color: white;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -258,4 +270,219 @@ nav.collapsed .logout-button {
 
 nav.collapsed .logout-button span {
   display: none;
+}
+
+/* Style pour la version réduite */
+nav.collapsed .logout-button {
+  justify-content: center;
+  padding: 12px;
+}
+
+nav.collapsed .logout-button span {
+  display: none;
+}
+
+nav.collapsed .logo-text, nav.collapsed .logo-subtext {
+  display: none;
+}
+
+nav.collapsed .nav-label {
+  display: none;
+}
+
+nav.collapsed button {
+  justify-content: center;
+}
+
+nav.collapsed button .nav-icon {
+  margin: 0;
+}
+
+/* Améliorations supplémentaires pour un design plus professionnel */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+/* Style pour le bouton de profil */
+.profile-section button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.profile-section button:hover {
+  background: rgba(239, 235, 233, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.profile-section button .profile-icon {
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+/* Style pour le texte du profil */
+.profile-info {
+  flex: 1;
+}
+
+.profile-name, .profile-role, .profile-email {
+  margin: 0;
+}
+
+/* Style pour les boutons de navigation */
+nav button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+  margin: 5px 0;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  width: 100%;
+}
+
+nav button:hover {
+  background: rgba(239, 235, 233, 0.1);
+  transform: translateX(5px);
+}
+
+nav button.active {
+  background: rgba(121, 85, 72, 0.4);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+nav button.active::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-light);
+  border-radius: 50%;
+}
+
+/* Style pour le pied de page */
+.nav-footer {
+  margin-top: auto;
+  padding: 20px 25px;
+  border-top: 1px solid rgba(239, 235, 233, 0.1);
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(239, 154, 154, 0.1);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--logout-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.logout-button:hover {
+  background: rgba(239, 154, 154, 0.2);
+  color: var(--logout-hover);
+  transform: translateY(-2px);
+}
+
+.logout-icon {
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    width: var(--navbar-collapsed);
+  }
+
+  .navbar-header {
+    padding: 0 15px 15px;
+  }
+
+  .logo-container {
+    gap: 10px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .logo-subtext {
+    font-size: 10px;
+  }
+
+  .profile-section {
+    padding: 15px 15px;
+    gap: 10px;
+  }
+
+  .profile-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .profile-status {
+    width: 12px;
+    height: 12px;
+  }
+
+  .profile-name {
+    font-size: 14px;
+  }
+
+  .profile-role, .profile-email {
+    font-size: 11px;
+  }
+
+  .nav-buttons {
+    padding: 0 10px;
+  }
+
+  nav button {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .nav-footer {
+    padding: 15px 15px;
+  }
+
+  .logout-button {
+    padding: 10px 15px;
+  }
+
+  .logout-icon {
+    font-size: 16px;
+  }
 }

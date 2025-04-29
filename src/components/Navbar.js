@@ -1,10 +1,13 @@
+// components/Navbar.js
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import profileImage from '../assets/profile.webp';
 import { 
   FaTachometerAlt, FaBed, FaCalendarAlt, FaUsers, FaEnvelope, 
   FaChartLine, FaCog, FaSignOutAlt, FaConciergeBell, 
-  FaCheckCircle, FaBroom, FaChevronRight, FaChevronLeft 
+  FaCheckCircle, FaBroom, FaChevronRight, FaChevronLeft,
+  FaMoneyBillWave, FaFileInvoiceDollar, FaFileInvoice,
+  FaTasks, FaShoppingCart, FaWarehouse, FaUserCheck
 } from 'react-icons/fa';
 import { RiHotelLine } from 'react-icons/ri';
 
@@ -36,19 +39,7 @@ function Navbar({ setActiveTab, adminName }) {
         </button>
       </div>
 
-      <div className="profile-section">
-        <div className="profile-image-container">
-          <img src={profileImage} alt="Profile" className="profile-image" />
-          <div className="profile-status"></div>
-        </div>
-        {!isCollapsed && (
-          <div className="profile-info">
-            <h3 className="profile-name">{adminName}</h3>
-            <p className="profile-role">Directeur</p>
-            <p className="profile-email">admin@royelstay.com</p>
-          </div>
-        )}
-      </div>
+     
 
       <div className="nav-divider"></div>
 
@@ -59,10 +50,17 @@ function Navbar({ setActiveTab, adminName }) {
           { icon: <FaCalendarAlt />, label: 'Réservations', tab: 'reservations' },
           { icon: <FaUsers />, label: 'Clients', tab: 'users' },
           { icon: <FaEnvelope />, label: 'Messages', tab: 'messages' },
-          { icon: <FaChartLine />, label: 'Analytique', tab: 'reports' },
           { icon: <FaConciergeBell />, label: 'Services', tab: 'services' },
-          { icon: <FaCheckCircle />, label: 'Complémentaire', tab: 'compatible' },
-          { icon: <FaBroom />, label: 'Ménage', tab: 'cleaning' },
+          { icon: <FaMoneyBillWave />, label: 'Paiements', tab: 'payments' },
+          { icon: <FaFileInvoiceDollar />, label: 'Invoices', tab: 'invoices' },
+          { icon: <FaFileInvoice />, label: 'Taxes', tab: 'taxes' },
+          {  icon: <FaWarehouse />, label: 'Gestion de Stocks & Commande de produits', tab: 'cleaning' },
+          { icon: <FaTasks />, label: 'Tâches de Ménage & Demmandes Spécial', tab: 'cleaning-tasks' },
+          { icon: <FaUserCheck />, label: 'Suivi du Personnel', tab: 'staff-tracking' },
+          
+          
+          
+          { icon: <FaCog />, label: 'Paramètres', tab: 'settings' }, // Ajoutez l'option Paramètres
         ].map((item) => (
           <button
             key={item.tab}

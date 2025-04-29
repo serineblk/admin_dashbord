@@ -52,7 +52,7 @@ function Services() {
   // Données des services avec détails supplémentaires
   const services = [
     {
-      name: 'Restauration',
+      name: 'Restauration Premium',
       description: 'Profitez de nos délicieux plats préparés par nos chefs étoilés. Cuisine locale et internationale à votre disposition.',
       image: restaurantImage,
       icon: <FaUtensils className="service-icon" />,
@@ -68,7 +68,7 @@ function Services() {
       ],
     },
     {
-      name: 'Spa',
+      name: 'Spa & Bien-être',
       description: 'Détendez-vous avec nos soins spa de luxe. Massages, soins du visage et bains relaxants vous attendent.',
       image: spaImage,
       icon: <FaSpa className="service-icon" />,
@@ -79,7 +79,7 @@ function Services() {
       ],
     },
     {
-      name: 'Service d\'urgence',
+      name: 'Assistance Médicale',
       description: 'Notre service d\'urgence est disponible 24/7 pour assurer votre sécurité et votre bien-être.',
       image: emergencyImage,
       icon: <FaMedkit className="service-icon" />,
@@ -90,7 +90,7 @@ function Services() {
       ],
     },
     {
-      name: 'Gym',
+      name: 'Centre Fitness',
       description: 'Maintenez votre routine sportive dans notre salle de sport entièrement équipée, ouverte 24h/24.',
       image: gymImage,
       icon: <FaDumbbell className="service-icon" />,
@@ -100,17 +100,7 @@ function Services() {
         { name: "Yoga", price: "35€", hours: "8h - 20h", team: "Équipe Relaxation", description: "Séances de yoga pour améliorer votre flexibilité et votre bien-être." },
       ],
     },
-    {
-      name: 'Service d\'étage',
-      description: 'Commandez des plats et boissons directement dans votre chambre. Disponible 24h/24 pour votre confort.',
-      image: roomServiceImage,
-      icon: <FaConciergeBell className="service-icon" />,
-      details: [
-        { name: 'Petit-Déjeuner', description: 'Croissants, café et jus d\'orange frais.' },
-        { name: 'Dîner Romantique', description: 'Menu spécial avec champagne servi dans votre chambre.' },
-        { name: 'Snacks Nocturnes', description: 'Sandwichs et boissons chaudes disponibles après minuit.' },
-      ],
-    },
+    
   ];
 
   // Gestion du clic sur un service

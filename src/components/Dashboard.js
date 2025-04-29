@@ -15,18 +15,6 @@ import Navbar2 from './Navbar2';
 const Dashboard = () => {
   const [date, setDate] = useState(new Date());
   const [searchTerm, setSearchTerm] = useState('');
-  const [showProfileForm, setShowProfileForm] = useState(false);
-  const [adminInfo, setAdminInfo] = useState({
-    name: 'Admin Name',
-    email: 'admin@example.com',
-    phone: '123-456-7890',
-  });
-
-  const handleSaveProfile = (updatedInfo) => {
-    setAdminInfo(updatedInfo);
-    setShowProfileForm(false);
-    alert("Les informations ont été mises à jour avec succès !");
-  };
 
   // Données pour les services supplémentaires
   const additionalServicesData = [
@@ -103,106 +91,16 @@ const Dashboard = () => {
     sienna: '#A0522D',
     tan: '#D2B48C'
   };
-  const ProfileForm = ({ adminInfo, onSave, onClose }) => {
-    const [formData, setFormData] = useState(adminInfo);
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value
-      });
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      onSave(formData);
-    };
-  
-    return (
-      <div className="profile-form-overlay">
-        <div className="profile-form-container">
-          <h2>Modifier le Profil Administrateur</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>Nom:</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Email:</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Téléphone:</label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-actions">
-              <button type="button" className="cancel-button" onClick={onClose}>
-                Annuler
-              </button>
-              <button type="submit" className="save-button">
-                Enregistrer
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <div className="dashboard-container">
       <Navbar2 />
       <div className="dashboard-header">
         <h1>Bienvenue sur le tableau de bord de gestion</h1>
-        <div className="profile-section">
-          <h2>Profil Administrateur</h2>
-          <div className="admin-info">
-            <p><strong>Nom:</strong> {adminInfo.name}</p>
-            <p><strong>Email:</strong> {adminInfo.email}</p>
-            <p><strong>Téléphone:</strong> {adminInfo.phone}</p>
-          </div>
-          <button className="profile-button" onClick={() => setShowProfileForm(true)}>
-            Modifier le Profil
-          </button>
-        </div>
       </div>
-      {showProfileForm && (
-        // eslint-disable-next-line react/jsx-no-undef
-        <ProfileForm
-          adminInfo={adminInfo}
-          onSave={handleSaveProfile}
-          onClose={() => setShowProfileForm(false)}
-        />
-      )}
       <div className="dashboard-content">
         <div className="dashboard-left">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Rechercher..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
+          
           <div className="dashboard-stats">
             <div className="stat-card"><h2>Chambres Disponibles</h2><p>25</p></div>
             <div className="stat-card"><h2>Réservations Actives</h2><p>12</p></div>

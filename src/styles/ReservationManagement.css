@@ -1,164 +1,70 @@
+/* ReservationManagement.css */
 .reservation-management {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #faf9f7;
-    
-    min-height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Lato', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-list {
+  margin-top: 20px;
+}
+
+.reservation-list-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.reservation-table th,
+.reservation-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.reservation-table th {
+  background-color: #f3f3f3;
+  color: #333;
+  font-weight: bold;
+}
+
+.reservation-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.no-reservations {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Animation de fade-in pour les éléments de la liste */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .reservation-form {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .form-input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .reservation-list {
-    margin-top: 20px;
-  }
-  
-  .reservation-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .reservation-details {
-    flex: 1;
-  }
-  
-  .reservation-details span {
-    margin-right: 20px;
-  }
-  
-  .reservation-actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .edit-button, .delete-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .edit-button {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .delete-button {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .edit-button:hover {
-    background-color: #218838;
-  }
-  
-  .delete-button:hover {
-    background-color: #c82333;
-  }
-  /* Ajout de styles pour l'heure */
-.reservation-details span {
-    margin-right: 20px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .reservation-details span:last-child {
-    margin-right: 0; /* Retirer la marge pour le dernier élément */
-  }
-  
-  /* Styles pour le champ de saisie de l'heure */
-  .form-input[type="time"] {
-    appearance: none; /* Supprimer le style par défaut sur certains navigateurs */
-    -webkit-appearance: none;
-    padding: 10px;
-    font-size: 14px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .form-input[type="time"]:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-  }
-  /* Conteneur pour le calendrier et l'heure */
-.date-time-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .date-picker {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .date-picker:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-  }
-  
-  .time-picker {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .time-picker:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-  }
-  
-  /* Styles pour la liste des réservations */
-  .reservation-details span {
-    margin-right: 20px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .reservation-details span:last-child {
-    margin-right: 0; /* Retirer la marge pour le dernier élément */
-  }
+}
+
+.reservation-table {
+  animation: fadeIn 0.5s ease-in-out;
+}

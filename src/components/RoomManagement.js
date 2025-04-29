@@ -24,7 +24,7 @@ function RoomManagement() {
         'Télévision avec chaînes nationales et internationales',
         'Wi-Fi gratuit',
       ],
-      status: 'libre' // Ajout du statut
+      
     },
     {
       number: '1002',
@@ -38,7 +38,6 @@ function RoomManagement() {
         'Téléviseur grand écran avec Netflix',
         'Mini-bar rempli (payant)',
       ],
-      status: 'occupé' // Ajout du statut
     },
     {
       number: '1003',
@@ -52,7 +51,6 @@ function RoomManagement() {
         'Douche à effet pluie',
         'Salle de bain en marbre avec double vasque'
       ],
-      status: 'libre' // Ajout du statut
     },
     {
       number: '1004',
@@ -66,7 +64,6 @@ function RoomManagement() {
         'Salle de bain en marbre avec double vasque',
         'Télévision dans la salle de bain',
       ],
-      status: 'en-nettoyage' // Ajout du statut
     },
     {
       number: '1005',
@@ -80,7 +77,6 @@ function RoomManagement() {
         'Machine à espresso (Nespresso)',
         'Plancher chauffant en salle de bain',
       ],
-      status: 'occupé' // Ajout du statut
     },
     {
       number: '1006',
@@ -94,7 +90,6 @@ function RoomManagement() {
         'Tablette de contrôle (lumière, climatisation, rideaux)',
         'Bureau avec imprimante/scanner',
       ],
-      status: 'libre' // Ajout du statut
     },
     {
       number: '1007',
@@ -108,7 +103,6 @@ function RoomManagement() {
         'Douche à effet pluie',
         'Salle de bain en marbre avec double vasque'
       ],
-      status: 'en-nettoyage' // Ajout du statut
     },
     {
       number: '1008',
@@ -122,7 +116,6 @@ function RoomManagement() {
         'Bouilloire / Machine à café',
         'Prises électriques et ports USB'
       ],
-      status: 'libre' // Ajout du statut
     },
     {
       number: '1009',
@@ -136,7 +129,6 @@ function RoomManagement() {
         'Enceinte Bluetooth',
         'Machine à espresso (Nespresso)',
       ],
-      status: 'occupé' // Ajout du statut
     }
     // Ajoutez le statut pour les autres chambres...
   ]);
@@ -150,7 +142,6 @@ const [newRoom, setNewRoom] = useState({
   image: null, 
   description: '', 
   equipment: [], 
-  status: 'libre' // Statut par défaut
 });
 
 const [editingRoomIndex, setEditingRoomIndex] = useState(null);
@@ -227,15 +218,7 @@ return (
         onChange={(e) => setNewRoom({ ...newRoom, description: e.target.value })}
         className="room-input"
       />
-      <select
-        value={newRoom.status}
-        onChange={(e) => setNewRoom({ ...newRoom, status: e.target.value })}
-        className="room-input"
-      >
-        <option value="libre">Libre</option>
-        <option value="occupé">Occupé</option>
-        <option value="en-nettoyage">En nettoyage</option>
-      </select>
+      
       <input
         type="file"
         accept="image/*"
